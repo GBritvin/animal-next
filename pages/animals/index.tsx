@@ -16,7 +16,7 @@ function AnimalList() {
   const [addOpen, setAddOpen] = useState(false);
   const queryClient = new QueryClient();
   const fetchAnimals = async () => {
-    return await Axios.get("http://localhost:3000/api/animals");
+    return await Axios.get("http://localhost:3000/api/animals", {headers:{ 'Access-Control-Allow-Origin': '*'}});
   };
   const { isLoading, isError, data, error, refetch } = useQuery(
     ["allAnimals"],
