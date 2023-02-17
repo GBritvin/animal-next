@@ -41,7 +41,7 @@ function AnimalList() {
       </Modal>
 
       <Group position="center" mb="md">
-        <Button onClick={refetch}>Обновить</Button>
+        {/* <Button onClick={refetch}>Обновить</Button> */}
         <Button onClick={() => setAddOpen(true)}>Добавить</Button>
       </Group>
       <TableSelection data={data?.data} />

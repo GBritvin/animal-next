@@ -19,14 +19,14 @@ const Home: NextPage = () => {
   // }, []);
 
   const scanOne = () => {
-    const randomArray = [];
+    const randomArray:any = [];
     for (let i = 0; i < 1; i++) {
       randomArray.push(Math.random().toString().slice(2));
     }
     setScannedAnimals(randomArray);
   };
   const scanMany = () => {
-    const randomArray = [];
+    const randomArray:any = [];
     for (let i = 0; i < 10; i++) {
       randomArray.push(Math.random().toString().slice(2));
     }
