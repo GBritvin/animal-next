@@ -1,0 +1,3 @@
+[submodule "moduless/dot-files"]
+	path = moduless/dot-files
+	url = git@git.sillink.siltech.ru:artyoma/dot-files.git

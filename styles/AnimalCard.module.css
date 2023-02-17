@@ -1,0 +1,27 @@
+.card {
+  font-size: large;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.cardRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.cardRow:not(:last-child) {
+  border-bottom: 1px solid rgb(222, 226, 230);
+}
+
+.cardLabel {
+  font-weight: 700;
+}

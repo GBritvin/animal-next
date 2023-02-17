@@ -1,0 +1,74 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Animal {
+  id                 Int                @id @default(autoincrement())
+  number             String
+  dateofbirth        String
+  weight             Weight[]
+  vaccine            Vaccine[]
+  gender             String
+  breed              String
+  rfid               String
+  group              Group?             @relation(fields: [groupId], references: [id])
+  status             Status             @default(ALIVE)
+  reproductionStatus Reproductionstatus @default(NONPREGNANT)
+  reproduction       Reproduction[]
+  groupId            Int?
+}
+
+model Group {
+  id      Int      @id @default(autoincrement())
+  number  String
+  animals Animal[]
+}
+
+model VaxList {
+  id      Int       @id @default(autoincrement())
+  vaxname String
+  vaccine Vaccine[]
+}
+
+model Weight {
+  id            Int      @id @default(autoincrement())
+  dateofweight  DateTime @default(now())
+  currentWeight Float
+  animal        Animal   @relation(fields: [animalId], references: [id])
+  animalId      Int
+}
+
+model Vaccine {
+  id        Int      @id @default(autoincrement())
+  dateofvax DateTime @default(now())
+  nameofvax VaxList  @relation(fields: [vaxListId], references: [id])
+  animal    Animal   @relation(fields: [animalId], references: [id])
+  animalId  Int
+  vaxListId Int
+}
+
+model Reproduction {
+  id        Int      @id @default(autoincrement())
+  dateofrep DateTime @default(now())
+  animal    Animal   @relation(fields: [animalId], references: [id])
+  animalId  Int
+  sire      String?
+}
+
+enum Reproductionstatus {
+  PREGNANT
+  NONPREGNANT
+}
+
+enum Status {
+  ALIVE
+  DEAD
+}

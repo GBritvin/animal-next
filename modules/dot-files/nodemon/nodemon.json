@@ -1,0 +1,5 @@
+{
+  "watch": ["./build/index.js", "./build/"],
+  "ext": "js",
+  "ignore": ["./build/sql/migrations/*"] 
+}
