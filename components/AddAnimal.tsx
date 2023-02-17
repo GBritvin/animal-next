@@ -8,7 +8,7 @@ import React from "react";
  *
  * @example
  */
-export default function AddAnimal({ rfid }) {
+export default function AddAnimal({ rfid }:any) {
   let actualRfid;
   if (!rfid) {
     actualRfid = "";

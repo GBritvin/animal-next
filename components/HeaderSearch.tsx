@@ -58,6 +58,7 @@ const USE_STYLES = createStyles((theme) => ({
 
 interface THeaderSearchProps {
   links: Array<{ link: string; label: string }>;
+  toggleMenu: any
 }
 
 /**

@@ -32,14 +32,14 @@ const Home: NextPage = () => {
     }
     setScannedAnimals(randomArray);
   };
-  const toggleRow = (id) =>
+  const toggleRow = (id:any) =>
     setSelectedColor((current) =>
       current.includes(id)
         ? current.filter((item) => item !== id)
         : [...current, id]
     );
 
-  const handleClick = (item) => {
+  const handleClick = (item:any) => {
     // setScannedAnimals(scannedAnimals.filter((el) => el !== item));
     setSelectedRfid(item);
     // toggleRow(item);

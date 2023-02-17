@@ -8,14 +8,14 @@ import {
 } from "@mantine/core";
 import { match } from "assert";
 
-interface StatsRingProps {
-  data: {
-    stats: string;
-    color: string;
-  }[];
-}
+// interface StatsRingProps {
+//   data: {
+//     stats: string;
+//     color: string;
+//   }[];
+// }
 
-export default function StatsRing({ data }: StatsRingProps) {
+export default function StatsRing({ data }: any) {
   console.log(data);
 
   return (

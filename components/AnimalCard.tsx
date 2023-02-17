@@ -37,7 +37,7 @@ const AnimalCard = ({ singleAnimalData }: any) => {
       </div>
       <Accordion>
         <AccordionItem label="История Вакцинация">
-          {singleAnimalData.vaccine.map((vaxInstance) => (
+          {singleAnimalData.vaccine.map((vaxInstance:any) => (
             <>
               <div className={styles.cardRow}>
                 <span className={styles.cardLabel}>
@@ -56,7 +56,7 @@ const AnimalCard = ({ singleAnimalData }: any) => {
           ))}
         </AccordionItem>
         <AccordionItem label="История Взвешивания">
-          {singleAnimalData.weight.map((weightInstance) => (
+          {singleAnimalData.weight.map((weightInstance:any) => (
             <>
               <div className={styles.cardRow}>
                 <span className={styles.cardLabel}>
@@ -75,7 +75,7 @@ const AnimalCard = ({ singleAnimalData }: any) => {
           ))}
         </AccordionItem>
         <AccordionItem label="История Опороса">
-          {singleAnimalData.reproduction.map((repInstance) => (
+          {singleAnimalData.reproduction.map((repInstance:any) => (
             <>
               <div className={styles.cardRow}>
                 <span className={styles.cardLabel}>

@@ -8,7 +8,7 @@ import React from "react";
  *
  * @example
  */
-export default function AddVaccine({ singleAnimalData }) {
+export default function AddVaccine({ singleAnimalData }:any) {
   const form = useForm({
     initialValues: {
       dateofvax: "",

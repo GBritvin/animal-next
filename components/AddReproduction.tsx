@@ -16,7 +16,7 @@ import React from "react";
  *
  * @example
  */
-export default function AddReproduction({ singleAnimalData }) {
+export default function AddReproduction({ singleAnimalData }:any) {
   const form = useForm({
     initialValues: {
       dateofrep: "",

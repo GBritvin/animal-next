@@ -16,7 +16,7 @@ import React from "react";
  *
  * @example
  */
-export default function AddWeight({ singleAnimalData }) {
+export default function AddWeight({ singleAnimalData }:any) {
   const form = useForm({
     initialValues: {
       dateofweight: "",
