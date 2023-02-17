@@ -8,7 +8,9 @@
     "start": "next start -p 3001",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "vercel-build": "prisma generate && next build",
+    "migrate:deploy": "prisma migrate deploy"
   },
   "dependencies": {
     "@mantine/core": "^4.2.11",
